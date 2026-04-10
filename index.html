@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Mateus Arantes - Portfolio</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link
+    href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=DM+Sans:wght@300;400;500&display=swap"
+    rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+  <!-- NAV -->
+  <nav>
+    <a href="#hero" class="nav-logo">Mateus Arantes</a>
+    <ul class="nav-links">
+      <li><a href="#about">About</a></li>
+      <li><a href="#experience">Experience</a></li>
+      <li><a href="#projects">Projects</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ul>
+    <button class="theme-toggle" id="theme-toggle" aria-label="Toggle dark mode">
+      <span id="theme-icon">🌙</span>
+      <span id="theme-label">Dark</span>
+    </button>
+  </nav>
+
+  <!-- HERO -->
+  <section id="hero">
+    <div class="hero-text">
+      <h1>
+        Hi, I'm<br />
+        <em>Mateus Arantes</em> —<br />
+        Fullstack Developer
+      </h1>
+      <p>
+        I'm a Fullstack Developer with experience in building and maintaining web applications.
+        I'm passionate about clean code, solving problems, and delivering value to users.
+      </p>
+      <div class="hero-cta">
+        <a href="#contact" class="btn btn-primary">Get in touch</a>
+        <a href="#projects" class="btn btn-outline">See my work</a>
+      </div>
+    </div>
+    <div class="hero-image">
+      <div class="avatar-wrap">
+        <img src="assets/profile.png" alt="Mateus Arantes" class="avatar" />
+      </div>
+    </div>
+  </section>
+
+  <!-- ABOUT -->
+  <section id="about">
+    <div class="section-label">About me</div>
+    <div class="about-grid">
+      <div>
+        <h2 class="section-title">A bit about who I am.</h2>
+        <div class="about-text">
+          <p>
+            Write 2–3 short paragraphs about yourself here. Talk about your background,
+            what drives you professionally, and what kind of problems you love solving.
+          </p>
+          <p>
+            Keep it human and conversational. Recruiters and clients read dozens of dry bios —
+            yours should feel like you're in the room.
+          </p>
+          <p>
+            You can mention where you're based, what you're currently working on, or
+            what you're looking for next.
+          </p>
+        </div>
+      </div>
+      <div>
+        <p class="section-label" style="color:rgba(255,255,255,0.5); margin-bottom: 1rem;">Skills & tools</p>
+        <div class="skills-grid">
+          <!-- EDIT: Replace with your actual skills -->
+          <span class="skill-tag">Fullstack Developer</span>
+          <span class="skill-tag">Low-code Developer</span>
+          <span class="skill-tag">Customer Satisfaction Driven</span>
+          <span class="skill-tag">Web Developer</span>
+          <span class="skill-tag">Customer Support Analyst</span>
+          <span class="skill-tag">Linux Server</span>
+          <span class="skill-tag">Windows Server</span>
+          <span class="skill-tag">Agile Methodologies</span>
+          <span class="skill-tag">Scrum</span>
+          <span class="skill-tag">FastAPI</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- EXPERIENCE -->
+  <section id="experience">
+    <div class="section-label">Career</div>
+    <h2 class="section-title">Where I've worked.</h2>
+    <div class="timeline">
+
+      <!-- EXPERIENCE ITEM 1 — most recent first -->
+      <div class="timeline-item fade-in">
+        <div class="timeline-date">2024 — 2025</div>
+        <div class="timeline-role">Low-Code Solutions Developer PL</div>
+        <div class="timeline-company">Truewind/Axians · Recife, Brazil</div>
+        <div class="timeline-desc">
+          One or two sentences describing what you did, the impact you had,
+          and the technologies or methods you used. Focus on outcomes, not tasks.
+        </div>
+      </div>
+
+      <!-- EXPERIENCE ITEM 2-->
+      <div class="timeline-item fade-in">
+        <div class="timeline-date">2021 — 2024</div>
+        <div class="timeline-role">Low-Code Solutions Developer Jr</div>
+        <div class="timeline-company">Truewind/Axians · Recife, Brazil</div>
+        <div class="timeline-desc">
+          One or two sentences describing what you did, the impact you had,
+          and the technologies or methods you used. Focus on outcomes, not tasks.
+        </div>
+      </div>
+
+      <!-- EXPERIENCE ITEM 2 -->
+      <div class="timeline-item fade-in">
+        <div class="timeline-date">2018 — 2021</div>
+        <div class="timeline-role">Customer Support Analyst PL</div>
+        <div class="timeline-company">NetMake/Scriptcase · Olinda, Brazil</div>
+        <div class="timeline-desc">
+          Again, keep it outcome-focused. What changed because you were there?
+          Quantify if you can — numbers always stand out.
+        </div>
+      </div>
+
+      <!-- EXPERIENCE ITEM 3 -->
+      <div class="timeline-item fade-in">
+        <div class="timeline-date">2016 — 2018</div>
+        <div class="timeline-role">Customer Support Analyst Jr</div>
+        <div class="timeline-company">NetMake/Scriptcase · Olinda, Brazil</div>
+        <div class="timeline-desc">
+          Even early roles are worth including. Show how you grew and what you contributed
+          even at the beginning of your career.
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- PROJECTS -->
+  <section id="projects">
+    <div class="section-label">Work</div>
+    <h2 class="section-title">Things I've built.</h2>
+    <div class="projects-grid">
+
+      <!-- PROJECT 1 -->
+      <div class="project-card fade-in">
+        <span class="project-tag">Category</span>
+        <div class="project-title">Project Name One</div>
+        <div class="project-desc">
+          A brief description of the project — what it does, what problem it solved,
+          and what you're proud of in it. 2–3 sentences max.
+        </div>
+        <a href="#" class="project-link">View project</a>
+      </div>
+
+      <!-- PROJECT 2 -->
+      <div class="project-card fade-in">
+        <span class="project-tag">Category</span>
+        <div class="project-title">Project Name Two</div>
+        <div class="project-desc">
+          Another brief description. You can mention collaborators, timeline,
+          or specific technologies if they're relevant.
+        </div>
+        <a href="#" class="project-link">View project</a>
+      </div>
+
+      <!-- PROJECT 3 -->
+      <div class="project-card fade-in">
+        <span class="project-tag">Category</span>
+        <div class="project-title">Project Name Three</div>
+        <div class="project-desc">
+          Keep this concise. Visitors skim — give them just enough to want to click
+          and learn more.
+        </div>
+        <a href="#" class="project-link">View project</a>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- CONTACT -->
+  <section id="contact">
+    <div class="section-label">Let's connect</div>
+    <h2 class="section-title">Get in touch.</h2>
+    <p class="contact-subtitle">
+      Whether you have a project in mind, a question, or just want to say hello —
+      my inbox is always open.
+    </p>
+    <div class="contact-links">
+      <a href="mailto:mateuscarantes@outlook.com" class="btn btn-white">Email me</a>
+      <a href="https://www.linkedin.com/in/mateus-arantes-9149ab93/" target="_blank" class="btn btn-ghost">LinkedIn</a>
+      <a href="https://github.com/Arantesmateus/" target="_blank" class="btn btn-ghost">GitHub</a>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer>
+    <span>© 2025 Mateus Arantes. All rights reserved.</span>
+    <span>Built with HTML & hosted on GitHub Pages.</span>
+  </footer>
+
+  <script>
+    // ─── DARK MODE TOGGLE ───
+    const toggle = document.getElementById('theme-toggle');
+    const icon = document.getElementById('theme-icon');
+    const label = document.getElementById('theme-label');
+
+    const setTheme = (dark) => {
+      document.body.classList.toggle('dark', dark);
+      icon.textContent = dark ? '☀️' : '🌙';
+      label.textContent = dark ? 'Light' : 'Dark';
+      localStorage.setItem('theme', dark ? 'dark' : 'light');
+    };
+
+    // Load saved preference, fallback to OS setting
+    const saved = localStorage.getItem('theme');
+    const prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
+    setTheme(saved ? saved === 'dark' : prefersDark);
+
+    toggle.addEventListener('click', () => {
+      setTheme(!document.body.classList.contains('dark'));
+    });
+
+    // ─── FADE IN ON SCROLL ───
+    const observer = new IntersectionObserver(
+      entries => entries.forEach(e => { if (e.isIntersecting) e.target.classList.add('visible'); }),
+      { threshold: 0.1 }
+    );
+    document.querySelectorAll('.fade-in').forEach(el => observer.observe(el));
+  </script>
+
+</body>
+
+</html>
