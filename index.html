@@ -17,10 +17,10 @@
   <nav>
     <a href="#hero" class="nav-logo">Mateus Arantes</a>
     <ul class="nav-links">
-      <li><a href="#about">About</a></li>
-      <li><a href="#experience">Experience</a></li>
-      <li><a href="#projects">Projects</a></li>
-      <li><a href="#contact">Contact</a></li>
+      <li><a href="#about" data-i18n="aboutLabel">About</a></li>
+      <li><a href="#experience" data-i18n="experienceLabel">Experience</a></li>
+      <li><a href="#projects" data-i18n="projectsLabel">Projects</a></li>
+      <li><a href="#contact" data-i18n="contactLabel">Contact</a></li>
     </ul>
     <button class="theme-toggle" id="theme-toggle" aria-label="Toggle dark mode">
       <span id="theme-icon">🌙</span>
@@ -31,18 +31,18 @@
   <!-- HERO -->
   <section id="hero">
     <div class="hero-text">
-      <h1>
+      <h1 data-i18n="heroTitle">
         Hi, I'm<br />
         <em>Mateus Arantes</em> —<br />
         Fullstack Developer
       </h1>
-      <p>
+      <p data-i18n="heroDescription">
         I'm a Fullstack Developer with experience in building and maintaining web applications.
         I'm passionate about clean code, solving problems, and delivering value to users.
       </p>
       <div class="hero-cta">
-        <a href="#contact" class="btn btn-primary">Get in touch</a>
-        <a href="#projects" class="btn btn-outline">See my work</a>
+        <a href="#contact" class="btn btn-primary" data-i18n="contactBtn">Get in touch</a>
+        <a href="#projects" class="btn btn-outline" data-i18n="projectsBtn">See my work</a>
       </div>
     </div>
     <div class="hero-image">
@@ -54,22 +54,31 @@
 
   <!-- ABOUT -->
   <section id="about">
-    <div class="section-label">About me</div>
+    <div class="section-label" data-i18n="aboutLabel">About me</div>
     <div class="about-grid">
       <div>
-        <h2 class="section-title">A bit about who I am.</h2>
+        <h2 class="section-title" data-i18n="aboutTitle">A bit about who I am.</h2>
         <div class="about-text">
-          <p>
-            Write 2–3 short paragraphs about yourself here. Talk about your background,
-            what drives you professionally, and what kind of problems you love solving.
+          <p data-i18n="aboutText1">
+            My career reflects a solid progression from technical support to solution development.
+            I began as a Software Support Analyst and later as Support Manager, leading teams and ensuring high customer
+            satisfaction worldwide.
+            During this period, I gained deep expertise in web servers, databases, and languages such as PHP and
+            JavaScript, while also creating onboarding materials and documentation that improved internal efficiency.
           </p>
-          <p>
-            Keep it human and conversational. Recruiters and clients read dozens of dry bios —
-            yours should feel like you're in the room.
+          <p data-i18n="aboutText2">
+            In recent years, I shifted my focus to low-code development, working as a Solutions Developer at Axians
+            Low-Code US.
+            I built and maintained applications for national and international clients, applying agile methodologies and
+            best practices in UX and CSS to deliver modern, intuitive interfaces.
+            I was also responsible for translating business requirements into clear technical specifications, helping
+            reduce rework and accelerate delivery.
           </p>
-          <p>
-            You can mention where you're based, what you're currently working on, or
-            what you're looking for next.
+          <p data-i18n="aboutText3">
+            This combination of experiences allows me to merge technical and strategic perspectives: from advanced
+            support to building scalable solutions.
+            Today, my strength lies in transforming complex needs into functional, well-structured applications, always
+            with a focus on quality, collaboration, and continuous innovation.
           </p>
         </div>
       </div>
@@ -85,7 +94,7 @@
           <span class="skill-tag">Linux Server</span>
           <span class="skill-tag">Windows Server</span>
           <span class="skill-tag">Agile Methodologies</span>
-          <span class="skill-tag">Scrum</span>
+          <span class="skill-tag">Customer Support Specialist</span>
           <span class="skill-tag">FastAPI</span>
         </div>
       </div>
@@ -94,8 +103,8 @@
 
   <!-- EXPERIENCE -->
   <section id="experience">
-    <div class="section-label">Career</div>
-    <h2 class="section-title">Where I've worked.</h2>
+    <div class="section-label" data-i18n="experienceLable">Career</div>
+    <h2 class="section-title" data-i18n="experienceTitle">Where I've worked.</h2>
     <div class="timeline">
 
       <!-- EXPERIENCE ITEM 1 — most recent first -->
@@ -147,8 +156,8 @@
 
   <!-- PROJECTS -->
   <section id="projects">
-    <div class="section-label">Work</div>
-    <h2 class="section-title">Things I've built.</h2>
+    <div class="section-label" data-i18n="projectsLable">Work</div>
+    <h2 class="section-title" data-i18n="projectsTitle">Things I've built.</h2>
     <div class="projects-grid">
 
       <!-- PROJECT 1 -->
@@ -189,23 +198,25 @@
 
   <!-- CONTACT -->
   <section id="contact">
-    <div class="section-label">Let's connect</div>
-    <h2 class="section-title">Get in touch.</h2>
-    <p class="contact-subtitle">
+    <div class="section-label" data-i18n="contactLable">Let's connect</div>
+    <h2 class="section-title" data-i18n="contactTitle">Get in touch.</h2>
+    <p class="contact-subtitle" data-i18n="contactSubtitle">
       Whether you have a project in mind, a question, or just want to say hello —
       my inbox is always open.
     </p>
     <div class="contact-links">
-      <a href="mailto:mateuscarantes@outlook.com" class="btn btn-white">Email me</a>
-      <a href="https://www.linkedin.com/in/mateus-arantes-9149ab93/" target="_blank" class="btn btn-ghost">LinkedIn</a>
-      <a href="https://github.com/Arantesmateus/" target="_blank" class="btn btn-ghost">GitHub</a>
+      <a href="mailto:mateuscarantes@outlook.com" class="btn btn-white" data-i18n="contactBtn">Email me</a>
+      <a href="https://www.linkedin.com/in/mateus-arantes-9149ab93/" target="_blank" class="btn btn-ghost"
+        data-i18n="contactBtnLinkedIn">LinkedIn</a>
+      <a href="https://github.com/Arantesmateus/" target="_blank" class="btn btn-ghost"
+        data-i18n="contactBtnGitHub">GitHub</a>
     </div>
   </section>
 
   <!-- FOOTER -->
   <footer>
-    <span>© 2025 Mateus Arantes. All rights reserved.</span>
-    <span>Built with HTML & hosted on GitHub Pages.</span>
+    <span data-i18n="footer1">© 2025 Mateus Arantes. All rights reserved.</span>
+    <span data-i18n="footer2">Built with HTML & hosted on GitHub Pages.</span>
   </footer>
 
   <script>
@@ -213,6 +224,57 @@
     const toggle = document.getElementById('theme-toggle');
     const icon = document.getElementById('theme-icon');
     const label = document.getElementById('theme-label');
+
+    const translations = {
+      en: {
+        heroTitle: "Hi, I'm",
+        aboutLabel: "About me",
+        contactBtn: "Email me",
+        themeBtnLight: "Light",
+        themeBtnDark: "Dark",
+        experienceLable: "Career",
+        experienceTitle: "Where I've worked",
+        projectsLable: "Projects",
+        projectsTitle: "Things I've built",
+        contactLable: "Contact",
+        contactTitle: "Get in touch",
+        contactSubtitle: "Whether you have a project in mind, a question, or just want to say hello — my inbox is always open.",
+        contactBtn: "Email me",
+        contactBtnLinkedIn: "LinkedIn",
+        contactBtnGitHub: "GitHub",
+        footer1: "© 2025 Mateus Arantes. All rights reserved.",
+        footer2: "Built with HTML & hosted on GitHub Pages.",
+        heroDescription: "I'm a Fullstack Developer with experience in building and maintaining web applications. I'm passionate about clean code, solving problems, and delivering value to users. ",
+        aboutText1: "My career reflects a solid progression from technical support to solution development. I began as a Software Support Analyst and later as Support Manager, leading teams and ensuring high customer satisfaction worldwide. During this period, I gained deep expertise in web servers, databases, and languages such as PHP and JavaScript, while also creating onboarding materials and documentation that improved internal efficiency.",
+        aboutText2: "In recent years, I shifted my focus to low-code development, working as a Solutions Developer at Axians Low-Code US. I built and maintained applications for national and international clients, applying agile methodologies and best practices in UX and CSS to deliver modern, intuitive interfaces. I was also responsible for translating business requirements into clear technical specifications, helping reduce rework and accelerate delivery.",
+        aboutText3: "This combination of experiences allows me to merge technical and strategic perspectives: from advanced support to building scalable solutions. Today, my strength lies in transforming complex needs into functional, well-structured applications, always with a focus on quality, collaboration, and continuous innovation.",
+        skillAndTools: "Skills & Tools"
+      },
+      pt: {
+        heroTitle: "Olá, eu sou",
+        aboutLabel: "Sobre mim",
+        contactBtn: "Me envie um email",
+        themeBtnLight: "Claro",
+        themeBtnDark: "Escuro",
+        experienceLable: "Carreira",
+        experienceTitle: "Onde já trabalhei",
+        projectsLable: "Projetos",
+        projectsTitle: "O que já construí",
+        contactLable: "Contato",
+        contactTitle: "Entre em contato",
+        contactSubtitle: "Se você tem um projeto em mente, uma pergunta ou apenas quer dizer olá — minha caixa de entrada está sempre aberta.",
+        contactBtn: "Me envie um email",
+        contactBtnLinkedIn: "LinkedIn",
+        contactBtnGitHub: "GitHub",
+        footer1: "© 2025 Mateus Arantes. Todos os direitos reservados.",
+        footer2: "Construído com HTML e hospedado no GitHub Pages.",
+        heroDescription: "Sou Desenvolvedor Fullstack com experiência na construção e manutenção de aplicações web. Sou apaixonado por código limpo, resolução de problemas e entrega de valor aos usuários.",
+        aboutText1: "Minha carreira reflete uma progressão sólida do suporte técnico ao desenvolvimento de soluções. Comecei como Analista de Suporte de Software e, posteriormente, como Gerente de Suporte, liderando equipes e garantindo alta satisfação dos clientes em todo o mundo. Nesse período, adquiri profundo conhecimento em servidores web, bancos de dados e linguagens como PHP e JavaScript, além de criar materiais de treinamento e documentação que melhoraram a eficiência interna.",
+        aboutText2: "Nos últimos anos, foquei no desenvolvimento low-code, atuando como Desenvolvedor de Soluções na Axians Low-Code US. Construí e mantive aplicações para clientes nacionais e internacionais, aplicando metodologias ágeis e melhores práticas de UX e CSS para entregar interfaces modernas e intuitivas. Também fui responsável por traduzir requisitos de negócio em especificações técnicas claras, ajudando a reduzir retrabalho e acelerar entregas.",
+        aboutText3: "Essa combinação de experiências me permite unir perspectivas técnicas e estratégicas: do suporte avançado à construção de soluções escaláveis. Hoje, minha força está em transformar necessidades complexas em aplicações funcionais e bem estruturadas, sempre com foco em qualidade, colaboração e inovação contínua.",
+        skillAndTools: "Habilidades & Ferramentas"
+      }
+    };
 
     const setTheme = (dark) => {
       document.body.classList.toggle('dark', dark);
