@@ -109,6 +109,16 @@ body.dark nav {
     color: var(--ink);
 }
 
+.container-btn {
+    display: flex;
+}
+
+.column {
+    flex: 1;
+    padding: 10px;
+    margin: 5px;
+}
+
 /* ─── HERO ─── */
 #hero {
     min-height: 100vh;

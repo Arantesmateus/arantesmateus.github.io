@@ -22,13 +22,15 @@
       <li><a href="#projects" data-i18n="btnProjects">Projects</a></li>
       <li><a href="#contact" data-i18n="btnContact">Contact</a></li>
     </ul>
-    <button class="theme-toggle" id="theme-toggle" aria-label="Toggle dark mode">
-      <span id="theme-icon">🌙</span>
-      <span id="theme-label">Dark</span>
-    </button>
-    <button class="theme-toggle" id="lang-toggle" aria-label="Toggle language">
-      <span id="lang-label">EN</span>
-    </button>
+    <div class="container-btn">
+      <button class="theme-toggle column" id="theme-toggle" aria-label="Toggle dark mode">
+        <span id="theme-icon">🌙</span>
+        <span id="theme-label">Dark</span>
+      </button>
+      <button class="theme-toggle column" id="lang-toggle" aria-label="Toggle language">
+        <span id="lang-label">PT</span>
+      </button>
+    </div>
   </nav>
 
   <!-- HERO -->
@@ -45,7 +47,7 @@
       </p>
       <div class="hero-cta">
         <a href="#contact" class="btn btn-primary" data-i18n="contactBtn">Get in touch</a>
-        <a href="#projects" class="btn btn-outline" data-i18n="projectsBtn">See my work</a>
+        <a href="#projects" class="btn btn-outline" data-i18n="myWorkBtn">See my work</a>
       </div>
     </div>
     <div class="hero-image">
@@ -57,7 +59,6 @@
 
   <!-- ABOUT -->
   <section id="about">
-    <div class="section-label" data-i18n="aboutLabel">About me</div>
     <div class="about-grid">
       <div>
         <h2 class="section-title" data-i18n="aboutTitle">A bit about who I am.</h2>
@@ -223,13 +224,9 @@
   </footer>
 
   <script>
-    // ─── DARK MODE TOGGLE ───
-    const toggle = document.getElementById('theme-toggle');
-    const icon = document.getElementById('theme-icon');
-    const label = document.getElementById('theme-label');
-
+    //Translations
     const translations = {
-      en: {
+      EN: {
         //NavButtons
         btnAboutMe: "About me",
         btnExperience: "Experience",
@@ -241,9 +238,9 @@
         heroTitle: "Hi, I'm",
         heroSubtitle: "Fullstack Developer",
         heroDescription: "I'm a Fullstack Developer with experience in building and maintaining web applications. I'm passionate about clean code, solving problems, and delivering value to users.",
+        myWorkBtn: "See my work",
         //About
-        aboutLabel: "About me",
-        aboutTitle: "About me",
+        aboutTitle: "A bit about who I am.",
         aboutText1: "My career reflects a solid progression from technical support to solution development. I began as a Software Support Analyst and later as Support Manager, leading teams and ensuring high customer satisfaction worldwide. During this period, I gained deep expertise in web servers, databases, and languages such as PHP and JavaScript, while also creating onboarding materials and documentation that improved internal efficiency.",
         aboutText2: "In recent years, I shifted my focus to low-code development, working as a Solutions Developer at Axians Low-Code US. I built and maintained applications for national and international clients, applying agile methodologies and best practices in UX and CSS to deliver modern, intuitive interfaces. I was also responsible for translating business requirements into clear technical specifications, helping reduce rework and accelerate delivery.",
         aboutText3: "This combination of experiences allows me to merge technical and strategic perspectives: from advanced support to building scalable solutions. Today, my strength lies in transforming complex needs into functional, well-structured applications, always with a focus on quality, collaboration, and continuous innovation.",
@@ -264,7 +261,7 @@
         footer1: "© 2025 Mateus Arantes. All rights reserved.",
         footer2: "Built with HTML & hosted on GitHub Pages."
       },
-      pt: {
+      PT: {
         //NavButtons
         btnAboutMe: "Sobre mim",
         btnExperience: "Experiência",
@@ -276,9 +273,9 @@
         heroTitle: "Olá, eu sou",
         aboutLabel: "Sobre mim",
         heroDescription: "Sou Desenvolvedor Fullstack com experiência na construção e manutenção de aplicações web. Sou apaixonado por código limpo, resolução de problemas e entrega de valor aos usuários.",
+        myWorkBtn: "Ver meus projetos",
         //About
-        aboutTitle: "Sobre mim",
-        aboutLabel: "Sobre mim",
+        aboutTitle: "Um pouco sobre quem eu sou",
         aboutText1: "Minha carreira reflete uma progressão sólida do suporte técnico ao desenvolvimento de soluções. Comecei como Analista de Suporte de Software e, posteriormente, como Gerente de Suporte, liderando equipes e garantindo alta satisfação dos clientes em todo o mundo. Nesse período, adquiri profundo conhecimento em servidores web, bancos de dados e linguagens como PHP e JavaScript, além de criar materiais de treinamento e documentação que melhoraram a eficiência interna.",
         aboutText2: "Nos últimos anos, foquei no desenvolvimento low-code, atuando como Desenvolvedor de Soluções na Axians Low-Code US. Construí e mantive aplicações para clientes nacionais e internacionais, aplicando metodologias ágeis e melhores práticas de UX e CSS para entregar interfaces modernas e intuitivas. Também fui responsável por traduzir requisitos de negócio em especificações técnicas claras, ajudando a reduzir retrabalho e acelerar entregas.",
         aboutText3: "Essa combinação de experiências me permite unir perspectivas técnicas e estratégicas: do suporte avançado à construção de soluções escaláveis. Hoje, minha força está em transformar necessidades complexas em aplicações funcionais e bem estruturadas, sempre com foco em qualidade, colaboração e inovação contínua.",
@@ -300,7 +297,10 @@
         footer2: "Construído com HTML e hospedado no GitHub Pages."
       }
     };
-
+    // ─── DARK MODE TOGGLE ───
+    const toggle = document.getElementById('theme-toggle');
+    const icon = document.getElementById('theme-icon');
+    const label = document.getElementById('theme-label');
     const setTheme = (dark) => {
       document.body.classList.toggle('dark', dark);
       icon.textContent = dark ? '☀️' : '🌙';
@@ -309,31 +309,35 @@
     };
 
     // Load saved preference, fallback to OS setting
-    const saved = localStorage.getItem('theme');
+    const themeSaved = localStorage.getItem('theme');
     const prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
-    setTheme(saved ? saved === 'dark' : prefersDark);
+    setTheme(themeSaved ? themeSaved === 'dark' : prefersDark);
 
     toggle.addEventListener('click', () => {
       setTheme(!document.body.classList.contains('dark'));
     });
 
     // ─── LANGUAGE SWITCH ───
-    const langToggle = document.getElementById('lang-toggle');
-    let lang = localStorage.getItem('lang') || 'EN';
+    const langBtn = document.getElementById('lang-toggle');
+    const langLabel = document.getElementById('lang-label');
 
-    const setLanguage = () => {
+    const setLanguage = (lang) => {
+      localStorage.setItem('lang', lang);
+      langLabel.textContent = lang === 'PT' ? 'EN' : 'PT';
       document.querySelectorAll('[data-i18n]').forEach(el => {
         const key = el.dataset.i18n;
         el.textContent = translations[lang][key];
       });
     };
+    const browserLang = navigator.language.split('-')[0].toUpperCase();
+    const defaultLang = ['PT', 'EN'].includes(browserLang) ? browserLang : 'EN';
+    const validLangs = ['PT', 'EN'];
+    const langSaved = validLangs.includes(localStorage.getItem('lang')) ? localStorage.getItem('lang') : null;
+    setLanguage(langSaved || defaultLang);
 
-    setLanguage();
-
-    langToggle.addEventListener('click', () => {
-      lang = lang === 'EN' ? 'PT' : 'EN';
-      localStorage.setItem('lang', lang);
-      setLanguage();
+    langBtn.addEventListener('click', () => {
+      const current = localStorage.getItem('lang');
+      setLanguage(current === 'PT' ? 'EN' : 'PT');
     });
 
     // ─── FADE IN ON SCROLL ───
